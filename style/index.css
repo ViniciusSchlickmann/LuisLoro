@@ -66,9 +66,10 @@ header li{
 
 header li:hover{
   scale: 1.2;
-  color: #FF7B00;
-  border-bottom: 3px solid #FF7B00;
+  color: #896FAF;
+  border-bottom: 3px solid #896FAF;
   padding-bottom: 20px;
+  font-weight: 700;
 }
 
 header h4{
@@ -79,21 +80,28 @@ header h3 {
   bottom: 450px;
   width: 100%;
   font-weight: 300;
+  text-shadow: 4px 4px 8px #171717;
 }
 
 header h1 {
-  bottom: 220px;
+  bottom: 330px;
   width: 100%;
   font-weight: 300;
   font-size: 96px;
+  text-shadow: 5px 5px 8px #171717;
 }
 
 /* --------------------------SOBRE-------------------------- */
 #sobre{
-  text-align: center;
+  background-color: #fff;
+}
+
+.sobre{
   width: 70%;
   margin-left: 15%;
-  margin-top: 8%;
+  padding-top: 8%;
+  text-align: center;
+
 }
 
 #sobre p{
@@ -112,6 +120,90 @@ header h1 {
   line-height: 1.8;
   margin-bottom: 8%;
   padding-left: 5%;
+}
+
+/* --------------------------PALESTRAS-------------------------- */
+#palestras{
+  background-color: #171717;
+}
+
+.palestras{
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+#palestras h1{
+  color: #e4e4e4;
+  font-weight: 400;
+  padding-bottom: 3%;
+}
+
+#palestras h3{
+  color: #e4e4e4;
+  font-weight: 300;
+  padding-bottom: 1%;
+}
+
+#palestras p{
+  text-align: left;
+  line-height: 1.8;
+  color: #e4e4e4;
+}
+
+.links-externos{
+  padding-top: 10%;
+}
+
+.links-externos h2{
+  color: #e4e4e4;
+  font-weight: 300;
+  padding-bottom: 3%;
+}
+
+.conteudos{
+  gap: 30px;
+  display: flex;
+}
+
+.summit{
+  width: 25%;
+}
+
+figure img{
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+figure p{
+  text-align: center;
+}
+
+figure figcaption{
+  color: #e4e4e4;
+  padding-top: 3%;
+}
+
+.titulo{
+  padding-top: 5%;
+  font-weight: 800;
+  margin-bottom: 10%;
+}
+
+.conteudos a{
+  color: #e4e4e4;
+  padding: 12px 64px;
+  border-radius: 8px;
+  background-color: #896FAF;
+}
+
+/* --------------------------LIVRO-------------------------- */
+#livro{
+  height: 150px;
 }
 
 /* --------------------------FOOTER-------------------------- */
