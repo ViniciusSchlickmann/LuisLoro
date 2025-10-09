@@ -147,10 +147,24 @@ header h1 {
   padding-bottom: 1%;
 }
 
+#palestras h4{
+  color: #e4e4e4;
+  font-weight: 300;
+  padding-top: 1%;
+}
+
 #palestras p{
   text-align: left;
   line-height: 1.8;
   color: #e4e4e4;
+  padding-bottom: 5%;
+}
+
+.palestras .button{
+  color: #e4e4e4;
+  padding: 12px 64px;
+  border-radius: 8px;
+  background-color: #896FAF;
 }
 
 .links-externos{
@@ -211,6 +225,23 @@ figure figcaption{
   width: 80%;
   height: 520px;
   padding-top: 3%;
+}
+
+.palestras2025 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
+  justify-items: center; 
+  padding: 2rem;
+}
+
+.palestras2025 figure {
+  text-align: center;
+}
+
+.palestras2025 img {
+  width: 60%;
+  border-radius: 10px;
 }
 
 /* --------------------------LIVRO-------------------------- */
