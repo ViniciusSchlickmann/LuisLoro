@@ -154,7 +154,7 @@ header h1 {
 }
 
 .links-externos{
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .links-externos h2{
@@ -168,7 +168,7 @@ header h1 {
   display: flex;
 }
 
-.summit{
+.summit, .campus-party, .correio, .podcast{
   width: 25%;
 }
 
@@ -199,6 +199,18 @@ figure figcaption{
   padding: 12px 64px;
   border-radius: 8px;
   background-color: #896FAF;
+}
+
+.palestras h2{
+  padding-top: 10%;
+  color: #e4e4e4;
+  font-weight: 300;
+}
+
+.summit25{
+  width: 80%;
+  height: 520px;
+  padding-top: 3%;
 }
 
 /* --------------------------LIVRO-------------------------- */
