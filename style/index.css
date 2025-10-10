@@ -148,7 +148,7 @@ header h1 {
 }
 
 #palestras h4{
-  color: #e4e4e4;
+  color: #7d7d7d;
   font-weight: 300;
   padding-top: 1%;
 }
@@ -246,7 +246,54 @@ figure figcaption{
 
 /* --------------------------LIVRO-------------------------- */
 #livro{
-  height: 150px;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+#livro h2{
+  font-weight: 400;
+  padding-bottom: 2%;
+}
+
+.livro{
+  display: flex;
+}
+
+.infos-livro{
+  padding-top: 5%;
+  text-align: left;
+  line-height: 30px;
+  width: 60%;
+}
+
+.infos-livro h2{
+  font-weight: 300;
+}
+
+.infos-livro p{
+  line-height: 25px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.imagem-livro{
+  width: 35%;
+  padding-top: 3%;
+  margin-left: 2%;
+}
+
+.imagem-livro img{
+  width: 100%;
+}
+
+.livro a{
+  color: #ffffff;
+  padding: 12px 64px;
+  border-radius: 8px;
+  background-color: #896FAF;
 }
 
 /* --------------------------FOOTER-------------------------- */
