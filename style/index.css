@@ -100,6 +100,7 @@ header h1 {
   width: 70%;
   margin-left: 15%;
   padding-top: 8%;
+  padding-bottom: 8%;
   text-align: center;
 
 }
@@ -115,11 +116,73 @@ header h1 {
   padding-bottom: 3%;
 }
 
-#sobre ul{
+.sobre h4{
   text-align: left;
-  line-height: 1.8;
-  margin-bottom: 8%;
-  padding-left: 5%;
+  line-height: 3;
+}
+
+.destaque{
+  color: #896FAF;
+}
+
+.detalhes-e-carrossel{
+  display: flex;
+}
+
+.curriculo{
+  width: 55%;
+}
+
+/* CARROSSEL */
+.carousel-container {
+    width: 45%;
+    height: 300px; /* Altura do carrossel */
+    overflow: hidden; /* Oculta as imagens que estão fora da área */
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slides-wrapper {
+    display: flex;
+    /* Importante: O JS alterará o 'transform: translateX()' 
+    para mover as imagens.
+    */
+    transition: transform 0.5s ease-in-out; 
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%; /* Garante que cada slide ocupe 100% da largura do contêiner */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilizando os botões de controle */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+}
+
+.prev-button {
+    left: 10px;
+    border-radius: 5px;
+}
+
+.next-button {
+    right: 10px;
+    border-radius: 5px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* --------------------------PALESTRAS-------------------------- */
@@ -225,11 +288,12 @@ figure figcaption{
   width: 80%;
   height: 520px;
   padding-top: 3%;
+  padding-bottom: 15%;
 }
 
 .palestras2025 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(5, 1fr); 
   gap: 2rem; 
   justify-items: center; 
   padding: 2rem;
