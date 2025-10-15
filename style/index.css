@@ -346,7 +346,10 @@ figure figcaption{
 
 #livro h2{
   font-weight: 400;
-  padding-bottom: 2%;
+}
+
+.first-item{
+  padding-top: 3%;
 }
 
 .livro{
@@ -362,6 +365,7 @@ figure figcaption{
 
 .infos-livro h2{
   font-weight: 300;
+  padding-top: 5%;
 }
 
 .infos-livro p{
@@ -730,5 +734,5 @@ footer p{
   .sobre h4{
   line-height: 1.6;
   padding-bottom: 10px;
-}
+  }
 }
