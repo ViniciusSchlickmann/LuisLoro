@@ -19,14 +19,22 @@
     <header>
       <img src="assets/wallpaper.png" alt="Imagem do palestrante com microfone na mão falando em público" class="wallpaper">
       <nav>
-        <h4>LUÍS FELIPE LORO</h4>
-        <ul>
-          <a href="#sobre"><li>SOBRE</li></a>
-          <a href="#palestras"><li>PALESTRAS</li></a>
-          <a href="#livro"><li>LIVRO</li></a>
-          <a href="#contato"><li>CONTATO</li></a>
-        </ul>
-      </nav>
+      <h4>LUÍS FELIPE LORO</h4>
+
+      <!-- Botão Hamburguer -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="menu">
+        <a href="#sobre"><li>SOBRE</li></a>
+        <a href="#palestras"><li>PALESTRAS</li></a>
+        <a href="#livro"><li>LIVRO</li></a>
+        <a href="#contato"><li>CONTATO</li></a>
+      </ul>
+    </nav>
       <h3>+ DE 25 MIL VISUALIZAÇÕES NO YOUTUBE</h3>
       <h1>LUÍS LORO</h1>
     </header>
@@ -92,7 +100,7 @@
 
           <a href="https://w.app/0rkaxh" 
             target="_blank"
-            class="button">Entre em contato e receba mais informações!
+            class="button">Receba mais informações!
           </a>
 
           <div class="links-externos">
@@ -172,9 +180,9 @@
         <div>
           <a href="https://w.app/0rkaxh" 
               target="_blank"
-              class="button">Entre em contato e receba mais informações!
+              class="button">Receba mais informações!
             </a>
-          </div>
+        </div>
 
 
         <h2>CLIENTES SATISFEITOS</h2>
@@ -303,6 +311,16 @@
     </footer>
 
   </main>
+
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
