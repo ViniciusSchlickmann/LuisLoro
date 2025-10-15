@@ -593,6 +593,7 @@ footer p{
   nav ul.active {
     display: flex;
     z-index: 999;
+    position: fixed;
   }
 
   nav li {
