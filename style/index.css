@@ -586,12 +586,13 @@ footer p{
     text-align: center;
     padding: 20px 0;
     gap: 20px;
-    z-index: 999;
+    z-index: 1000;
   }
 
   /* Mostra quando ativo */
   nav ul.active {
     display: flex;
+    z-index: 999;
   }
 
   nav li {
@@ -600,19 +601,16 @@ footer p{
 
   nav h4 {
     font-size: 16px;
-    z-index: 1;
   }
 
   header h3 {
     bottom: 120px;
     font-size: 16px;
-    z-index: 4;
   }
 
   header h1 {
     bottom: 65px;
     font-size: 42px;
-    z-index: 5;
   }
 
   header li:hover {
