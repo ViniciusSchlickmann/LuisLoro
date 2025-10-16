@@ -39,6 +39,19 @@ header::before {
   display: block;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
 header nav, header h1, header h3 {
   position: absolute;
   z-index: 2;
@@ -90,37 +103,6 @@ header h1 {
   font-size: 96px;
   text-shadow: 5px 5px 8px #171717;
 }
-
-/* Botão do menu (hamburguer) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1000;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Estado ativo (animação de X) */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
 
 /* --------------------------SOBRE-------------------------- */
 #sobre{
@@ -440,26 +422,97 @@ footer p{
 }
 
 /* ====================== MEDIA QUERY - 768px ====================== */
-@media (max-width: 1100px) {
-  header h3 {
-    bottom: 180px;
-  }
+@media (max-width: 768px) {
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90; 
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
-  header h1 {
-    bottom: 100px;
-    font-size: 76px;
-  }
+#menu-toggle:checked ~ .menu-overlay {
+    opacity: 1; 
+    visibility: visible; 
+}
 
-  header nav {
-  top: 20px;
-  width: 90%;
-  margin-left: 2%;
-  }
+header ul#menu a {
+    display: block; 
+}
 
-  header ul{
-    gap: 40px;
-  }
+    header h3 {
+        bottom: 180px;
+    }
 
+    header h1 {
+        bottom: 100px;
+        font-size: 76px;
+    }
+
+    header nav {
+        top: 20px;
+        width: 90%;
+        margin-left: 2%;
+        align-items: center; 
+    }
+    
+    header h4 {
+        order: 1; 
+    }
+
+    /* ------------------- HAMBURGUER ------------------- */
+    .hamburger {
+        display: block; 
+        order: 2; 
+        z-index: 999; 
+    }
+
+    header ul#menu { 
+        flex-direction: column;
+        gap: 20px;
+        position: fixed; 
+        top: 0;
+        right: 0;
+        height: 100vh; 
+        width: 70%; 
+        background-color: #171717; 
+        padding: 80px 40px 20px;
+        z-index: 998;
+        
+        transform: translateX(100%);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #menu-toggle:checked ~ ul#menu {
+        transform: translateX(0); 
+    }
+
+    header li {
+        color: white;
+        font-weight: 200;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header li:hover {
+        scale: 1; 
+        color: #896FAF;
+        border-bottom: none; 
+        padding-bottom: 0;
+        font-weight: 400;
+    }
+
+    #head h3, #head h1{
+      display: none;
+    }
+    
+  
   /* SOBRE */
   .sobre {
     width: 90%;
@@ -567,33 +620,6 @@ footer p{
 
   main {
     overflow-x: hidden;
-  }
-
-  /* HEADER */
-  .menu-toggle {
-    display: flex;
-  }
-
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    gap: 20px;
-    z-index: 1000;
-  }
-
-  /* Mostra quando ativo */
-  nav ul.active {
-    display: flex;
-    z-index: 999;
-    position: fixed;
   }
 
   nav li {

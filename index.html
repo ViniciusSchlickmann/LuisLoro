@@ -18,17 +18,14 @@
 
   <main>
     
-    <header>
+    <header id="head">
       <img src="assets/wallpaper.png" alt="Imagem do palestrante com microfone na mão falando em público" class="wallpaper">
+
       <nav>
       <h4>LUÍS FELIPE LORO</h4>
 
-      <!-- Botão Hamburguer -->
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
 
       <ul id="menu">
         <a href="#sobre"><li>SOBRE</li></a>
@@ -36,6 +33,9 @@
         <a href="#livro"><li>LIVRO</li></a>
         <a href="#contato"><li>CONTATO</li></a>
       </ul>
+
+      <label for="menu-toggle" class="menu-overlay"></label>
+
     </nav>
       <h3>+ DE 25 MIL VISUALIZAÇÕES NO YOUTUBE</h3>
       <h1>LUÍS LORO</h1>
@@ -323,16 +323,6 @@
     </footer>
 
   </main>
-
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-  });
-</script>
 
 </body>
 </html>
